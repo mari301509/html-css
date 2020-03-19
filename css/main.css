@@ -146,6 +146,7 @@ body *, body *::before, body *::after{
     -1px 0 #000,
     0px -1px #000;
     line-height: 45px;
+    outline: 0;
 }
 .submenu{
     position: absolute;
@@ -158,6 +159,18 @@ body *, body *::before, body *::after{
 }
 .menu-item-act .submenu{
     display: block;
+}
+
+.menu-item-act .menu-link,
+.menu-link:focus{
+    color:yellow;
+    /* border-bottom: 2px solid black; */
+}
+
+.menu-item-act .menu-link::after{
+    content:"";
+    display: block;
+    border-bottom: 2px solid #000;
 }
 .menu-item:nth-child(1) .submenu,
 .menu-item:nth-child(2) .submenu,
