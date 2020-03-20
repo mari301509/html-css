@@ -14,7 +14,7 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
-    clip-path:(0 0, 0 0, 0 0);
+    clip-path:polygon(0 0, 0 0, 0 0);
 }
 /* 본문 기본 설정 */
 body{ 
@@ -22,7 +22,8 @@ body{
     font-weight: 400;
     font-size: 1.4rem;
     color: #181818;
-    background-color: #ffffff;
+    background: url(images/bg_flower.png) no-repeat center 0,
+                #ccc linear-gradient(#ccc, #eee, #fff) no-repeat;
 }
 html{
     font-size: 10px;
@@ -36,17 +37,13 @@ ul{
     padding-left: 0;
     margin: 0;
 }
+fieldset{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
-.container{
-    background-color: silver;
-}
-.visual{
-    height: 10vh;
-    background-color: lime
-}
-.main{
-    background-color: blue;
-}
+
 .g1{
     background-color: pink
 }
@@ -114,6 +111,58 @@ body *, body *::before, body *::after{
 }
 .link > li, .link > li > a{
     display: inline-block;
+}
+/* 비주얼 */
+.visual{
+    height: 120px;
+    position: relative;
+}
+.visual::before,
+.visual::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flowerAni 2s infinite alternate;
+}
+.visual::before{
+    background: url(images/ani_flower_01.png) no-repeat 0px -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+}
+.visual::after{
+    background: url(images/ani_flower_03.png) no-repeat 300px 0px,url(images/ani_flower_04.png) no-repeat 800px 0px;
+    animation-delay:1s;
+}
+.visual-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    animation: textAni 0.5s 1s forwards;
+    /* animation-play-state: running; */
+    opacity: 0;
+}
+@keyframes textAni{
+    0%{
+        opacity: 0;
+        transform: translate(0,0);
+        font-size: 1.2rem;
+        opacity: 0;
+    }
+    100%{
+        transform: translate(400px,75px);
+        font-size: 2.4rem;
+        opacity: 1;
+    }
+}
+@keyframes flowerAni{
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+
+        opacity: 1;
+    }
 }
 /* 메인 메뉴 */
 .navigation{
@@ -196,6 +245,9 @@ body *, body *::before, body *::after{
     align-items: stretch;
     justify-content: space-between;
     padding: 30px;
+    min-height: 400px;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
 }
 .group{
     float: left;
@@ -208,4 +260,34 @@ body *, body *::before, body *::after{
 }
 .g3{
     width: 190px;
+}
+.login{
+    border-radius: 5px;
+    background: #af0000 linear-gradient(to bottom,#ff5132,#af0000);
+    padding: 10px;
+}
+.login h2{
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: yellow;
+    margin: 10px;
+}
+.login-wrap{
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+.login form{
+    border-bottom: 1px solid lightgray;
+}
+.login-wrap fieldset{
+    display: flex;
+}
+.login-input{
+    display: flex;
+    flex-direction: column;
+}
+.login-wrap li{
+    display: inline-block;
 }
