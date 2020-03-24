@@ -460,61 +460,62 @@ dl,dd{
     border: 1px solid gray;
     vertical-align: middle;
 }
+
 /* 게시판 */
 .board{
     position: relative;
+    height: 200px;
 }
-.notice > ul,
-.notice > a,
-.pds > ul,
-.pds > a{
+.board-item{
+float: left;
+padding: 10px;
+border: 1px solid gray;
+border-radius: 5px 5px 0 0;
+background-color: lightgray;
+}
+.board-act:not(.board-item:first-of-type){
+    margin-left: -1px;
+}
+.board-item:first-of-type{
+    margin-right: -1px;
+}
+.board-item > ul{
     display: none;
 }
-.notice,
-.pds{
-    display: inline-block;
-    white-space: nowrap;
-}
-.notice > h2,
-.pds > h2{
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 400;
-    border: 1px solid gray;
-    border-radius: 5px 5px 0 0;
-    background: lightgray linear-gradient(to bottom, silver, lightgray);
-}
-.notice > h2 > a,
-.pds > h2 > a{
-    display: block;
-    padding: 10px;
-}
-.board-act > h2 {
+.board-act{
     border: 1px solid orangered;
+    border-radius: 5px 5px 0 0;
     border-bottom: 0;
-    background: rgba(0,0,0,0);
-    color: orangered;
+    background-color: rgba(0, 0, 0, 0);
+    color:orangered;
 }
-.board-act > ul {
+.board-act > ul{
+    white-space: nowrap;
+    display: block;
     position: absolute;
-    top: 45px;
+    color: black;
+    top:40px;
     left: 0;
-    display: block;
-    margin-top: 10px;
 }
-.board-act > ul > li {
-    line-height: 30px;
-    float: left;
-    width: 100%;
-}
-.board-act > ul > li > time{
-    float: right;
-}
-.board-act .more {
-    display: block;
+.board > a{
     position: absolute;
-    top: 10px;
+    top: 0;
     right: 0;
 }
-
+.board-act > ul > li {
+    float: left;
+    width: 100%;
+    line-height: 30px;
+}
+.board-item > ul > li > a {
+    float: left;
+    display: block;
+    padding-left: 5px;
+}
+.board-act li time{
+    float: right;
+}
+.board-act > ul{
+    width: 100%;
+} 
 /* 뉴스 */

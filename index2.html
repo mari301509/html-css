@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>웹카페 - HtML5, CSS3, 웹표준, 웹접근성</title>
     <!-- <link rel="stylesheet" href="css/main.css"> -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main2.css">
     <script defer src=./js/jquery.min.js></script>
     <script defer src=./js/main.js></script>
 </head>
@@ -149,62 +149,34 @@
                             </fieldset>
                         </form>
                     </section>
-                    <div class="board">
-                        <section class="notice board-act">
-                            <h2><a href="#" role="button" id="notic">공지사항</a></h2>
-                            <ul>
-                                <li>
-                                    <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
-                                    <time datetime="2020-03-24T14:51:11"></time>
-                                </li>
-                                <li>
-                                    <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
-                                    <time></time>
-                                </li>
-                                <li>
-                                    <a href="#">KWCAG 2.1 소식</a>
-                                    <time></time>
-                                </li>
-                                <li>
-                                    <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
-                                    <time></time>
-                                </li>
-                                <li>
-                                    <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
-                                    <time></time>
-                                </li>
-                            </ul>
-                            <a href="#" class="more" aria-labelledby="notice" title="공지사항"><span class="icon-plus"></span>더보기</a>
-                        </section><section class="pds">
-                            <h2><a href="#" role="button" id="pds">자료실</a></h2>
-                            <ul class="pds-list">
-                                <li>
-                                    <a href="#">디자인 사이트 링크 모음</a>
-                                    <time></time>
-                                </li>
-                                <li>
-                                    <a href="#">웹 접근성 관련 자료 모음</a>
-                                    <time></time>
-                                </li>
-                                <li>
-                                    <a href="#">예제 샘플 응용해보기</a>
-                                    <time></time>
-                                </li>
-                                <li>
-                                    <a href="#">웹 접근성 향상을 위한 국가 표준 기술 가이드라인</a>
-                                    <time></time>
-                                </li>
-                                <li>
-                                    <a href="#">로얄티 프리 이미지 자료</a>
-                                    <time></time>
-                                </li>
-                            </ul>
-                            <a href="#" class="more" aria-labelledby="pds" title="자료실"><span class="icon-plus"></span>더보기</a>
-                        </section>
-                        <section class="news">
-                            <h2>새소식</h2>
-                        </section>
-                    </div>
+                    <section class="board">
+                        <h2 class="a11y-hidden">게시판</h2>
+                        <ul>
+                            <li class="board-act board-item ">
+                                <a class="board-link" href="#">공지사항</a>
+                                <ul>
+                                    <li><a href="">HTML의 모든 것을 알려주마 샘플 활용법</a><time datetime="2018-05-31">2018.05.31</time></li>
+                                    <li><a href="">W3C 사이트 리뉴얼</a><time datetime="2018-05-31">2018.05.31</time></li>
+                                    <li><a href="">KWCAG 2.1 소식</a><time datetime="2018-05-31">2018.05.31</time></li>
+                                    <li><a href="">서버 점검으로 인한 사이트 이용안내 입니다.</a><time datetime="2018-05-31">2018.05.31</time></li>
+                                    <li><a href="">여러분이 생각하는 웹 접근성에 대해 이야기</a><time datetime="2018-05-31">2018.05.31</time></li>
+                                </ul>
+                            </li>
+                            <li class="board-item"><a href="#" class="board-link">자료실</a>
+                                <ul>
+                                    <li><a href="">디자인 사이트 링크 모음</a><time datetime="2018-05-31">2018.05.31</time></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a href="#">+더보기</a>
+                    </section>
+                    <section class="news">
+                        <h2>새소식</h2>
+                    </section>
             </div>
             <div class="group g3">Group3</div>
         </main>
