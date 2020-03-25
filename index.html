@@ -40,6 +40,7 @@
                             <li class="submenu-item"><a href="#" class="submenulink">CSS framework</a></li>
                         </ul>
                     </li>
+                    li>ul>a
                     <li class="menu-item">
                         <a href="#" class="menu-link">웹표준</a>
                         <ul class="submenu">
@@ -114,8 +115,8 @@
                 <section class="validation">
                     <h2 class="a11y-hidden">유효성검사 배너</h2>
                     <ul>
-                        <li><a href="https://validator.w3.org/" class="val-link" target="_blank"title="마크업 유효성검사 사이트로 이동(새창)">W3C Markup Validation</a></li>
-                        <li><a href="https://jigsaw.w3.org/css-validator" class="val-link" target="_blank"title="CSS 유효성검사 사이트로 이동(새창)">CSS Validation Service</a></li>
+                        <li><a href="https://validator.w3.org/" class="val-link" target="_blank" title="마크업 유효성검사 사이트로 이동(새창)">W3C Markup Validation</a></li>
+                        <li><a href="https://jigsaw.w3.org/css-validator" class="val-link" target="_blank" title="CSS 유효성검사 사이트로 이동(새창)">CSS Validation Service</a></li>
                     </ul>
                 </section>
                 <section class="term">
@@ -143,7 +144,7 @@
                         <form class="search-form" action="https://formspree.io/mpzljyyp" method="GET">
                             <fieldset>
                                 <legend class="a11y-hidden" aria-hidden="true">검색폼</legend>
-                                <div class="flex-box"><label for="search"><span class="icon-search" aria="hidden"></span>자료검색</label><input type="search"
+                                <div class="flex-box"><label for="search"><span class="icon-search"></span>자료검색</label><input type="search"
                                 placeholder="검색어를 입력하세요." id="search" required name="keyword">
                                 <button type="submit">검색</button></div>
                             </fieldset>
@@ -151,64 +152,99 @@
                     </section>
                     <div class="board">
                         <section class="notice board-act">
-                            <h2><a href="#" role="button" id="notic">공지사항</a></h2>
-                            <ul>
+                            <h2 class="tab"><a href="#" role="button" id="notice">공지사항</a></h2>
+                            <ul class="notice-list">
                                 <li>
                                     <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
-                                    <time datetime="2020-03-24T14:51:11"></time>
+                                    <time datetime="2020-03-24T14:51:11">1111.11.11</time>
                                 </li>
                                 <li>
                                     <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11">1111.11.11</time>
                                 </li>
                                 <li>
                                     <a href="#">KWCAG 2.1 소식</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11">1111.11.11</time>
                                 </li>
                                 <li>
                                     <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11">1111.11.11</time>
                                 </li>
                                 <li>
                                     <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11">1111.11.11</time>
                                 </li>
                             </ul>
                             <a href="#" class="more" aria-labelledby="notice" title="공지사항"><span class="icon-plus"></span>더보기</a>
-                        </section><section class="pds">
-                            <h2><a href="#" role="button" id="pds">자료실</a></h2>
+                        </section>
+                        <section class="pds">
+                            <h2 class="tab"><a href="#" role="button" id="pds">자료실</a></h2>
                             <ul class="pds-list">
                                 <li>
                                     <a href="#">디자인 사이트 링크 모음</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11">1111.11.11</time>
                                 </li>
                                 <li>
                                     <a href="#">웹 접근성 관련 자료 모음</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11"></time>
                                 </li>
                                 <li>
                                     <a href="#">예제 샘플 응용해보기</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11"></time>
                                 </li>
                                 <li>
                                     <a href="#">웹 접근성 향상을 위한 국가 표준 기술 가이드라인</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11"></time>
                                 </li>
                                 <li>
                                     <a href="#">로얄티 프리 이미지 자료</a>
-                                    <time></time>
+                                    <time datetime="2020-03-24T14:51:11"></time>
                                 </li>
                             </ul>
                             <a href="#" class="more" aria-labelledby="pds" title="자료실"><span class="icon-plus"></span>더보기</a>
                         </section>
-                        <section class="news">
-                            <h2>새소식</h2>
-                        </section>
                     </div>
+                            <section class="news">
+                                <h2>새소식</h2>
+                                <article>
+                                    <a href="#">
+                                        <h3>W3C 사이트가 리뉴얼 되었습니다</h3>
+                                        <time datetime="2020-03-25T11:46:28">3333.77.77</time>
+                                        <p>
+                                            디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 
+                                            기존보다 최신 정보 및 개발자를 위한 기술 가이드도 
+                                            찾기 쉽도록 구성되어 있습니다.
+                                        </p>
+                                        <figure>
+                                            <img src="./images/news.gif" alt="" aria-labelledby="thumbnailCaption">
+                                            <figcaption id="thumbnailCaption">W3C 리뉴얼</figcaption>
+                                        </figure>
+                                    </a>
+                                </article>
+                                <a href="" class="more"><span class="icon-plus"></span>더보기</a>
+                            </section>
             </div>
-            <div class="group g3">Group3</div>
+            <div class="group g3">
+                <div class="section-wrap">
+                    <section class="event">
+                        <h2>신규<span>이벤트</span></h2>
+                        <div>
+                            <p class="event-thumbnail">
+                                <img src="images/free_gift.gif" alt="이벤트 경품: 웹표준 핵심 가이드북2 도서 증정">
+                            </p>
+                            <p class="event-index">
+                                <em>웹표준 핵심 가이드북 2 출시!</em> 선착순 500명 한정으로 증정.
+                            </p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-event-prev">이전 이벤트 보기</button>
+                            <button type="button" class="btn-event-next">다음 이벤트 보기</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </main>
-        <article class="slogan">슬로건</article>
+        <div class="slogan">슬로건</div>
         <div class="footer-bg">
             <footer class="footer">푸터</footer>
         </div>

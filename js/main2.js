@@ -2,14 +2,13 @@
 var menuItems = $('.menu-item');
 var menuLinks = $('.menu-link');
 var subLinks = $('.submenu a');
-var boardItems = $('.board li');
-var sections = $('.board section');
-var tab = $('.tab a');
+var boardItem = $('.board-item')
+var boardLink = $('.board-link')
+var boardLinks = $('.board-act > ul > li > a');
 
 //attr
 subLinks.attr('class','icon-dot-circled');
-boardItems.attr('class','icon-dot-circled');
-
+boardLinks.attr('class','icon-dot-circled');
 
 //funtion
 menuLinks.click(function(event){
@@ -17,8 +16,8 @@ menuLinks.click(function(event){
     menuItems.removeClass('menu-item-act');
     $(this).parent().addClass('menu-item-act');
 })
-tab.click(function(event){
+boardLink.click(function(event){
     event.preventDefault();
-    sections.removeClass('board-act');
-    $(this).parent().parent().addClass('board-act');
+    boardItem.removeClass('board-act');
+    $(this).parent().addClass('board-act');
 })

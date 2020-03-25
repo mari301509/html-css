@@ -44,13 +44,7 @@ fieldset{
 }
 
 
-/* 
-.g2{
-    background-color: orange
-} */
-.g3{
-    background-color: skyblue
-}
+
 .slogan{
     height: 10vh;
     background-color: blueviolet;
@@ -463,58 +457,170 @@ dl,dd{
 /* 게시판 */
 .board{
     position: relative;
+    padding-top: 45px;
+    margin-bottom: 20px;
 }
-.notice > ul,
-.notice > a,
-.pds > ul,
-.pds > a{
-    display: none;
+.board .more{
+    position: absolute;
+    top: -8px;right: -8px;
+    padding: 8px;
 }
-.notice,
-.pds{
-    display: inline-block;
-    white-space: nowrap;
+.more .icon-plus{
+    color: green;
 }
-.notice > h2,
-.pds > h2{
+.board h2{
+    position: absolute;
+    top: 0;
     margin: 0;
     font-size: 1.4rem;
-    font-weight: 400;
-    border: 1px solid gray;
-    border-radius: 5px 5px 0 0;
-    background: lightgray linear-gradient(to bottom, silver, lightgray);
 }
-.notice > h2 > a,
-.pds > h2 > a{
+.pds h2{
+    left: 72px;
+}
+.tab{
     display: block;
-    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid gray;
+    background: silver linear-gradient(silver, lightgray);
+    font-weight: 400;
 }
-.board-act > h2 {
-    border: 1px solid orangered;
+.board-act .tab{
+    border-color: orangered;
+    z-index: 10;
+    background: white;
     border-bottom: 0;
-    background: rgba(0,0,0,0);
     color: orangered;
 }
-.board-act > ul {
+.tab a{
+    padding: 5px 10px;
+    display: block;
+}
+.board-act > ul{
+    display: block !important;
+}
+.board ul{
+    display: none;
+    min-height: 150px;
+}
+.board ul li{
+    margin-bottom: 15px;
+}
+.board ul a{
+    width: 275px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+/* 뉴스 */
+/* .news{
+    background: yellow;
+} */
+.news{
+    position: relative;
+}
+.news h2{
+    font-size: 1.6rem;
+    color: orangered;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.news article::before{
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    margin-bottom: 20px;
+    background: silver linear-gradient(to right, silver, white);
+}
+.news article{
+    position: relative;
+}
+.news article a{
+    display: block;
+}
+.news article h3,
+.news article time,
+.news article p{
+    padding-left: 130px;
+    margin: 0;
+}
+.news article h3{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+} 
+.news article time{
+    display: block;
+    margin-bottom: 7px;
+}
+.news article p{
+    line-height: 1.5;
+}
+.news figure{
+    margin: 0;
     position: absolute;
-    top: 45px;
+    top: 20px;
     left: 0;
-    display: block;
-    margin-top: 10px;
 }
-.board-act > ul > li {
-    line-height: 30px;
-    float: left;
-    width: 100%;
+.news figure img{
+    filter: blur(1px);
+    box-shadow: 5px 15px 20px 0 lightgray;
+    margin-bottom: 20px;
 }
-.board-act > ul > li > time{
-    float: right;
+.news figcaption{
+    text-align: center;
 }
-.board-act .more {
-    display: block;
+.news .more{
     position: absolute;
-    top: 10px;
+    top: 0;
     right: 0;
 }
+/* 콜럼 3*/
+.section-wrap{
+    padding: 15px 10px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: silver linear-gradient(to bottom, silver, #eee);
+    
+}
+/* 신규이벤트 */
+.event{
+    position: relative;
+    border-bottom: 1px solid gray;
+}
+.event h2{
+    font-size: 1.5rem;
+    margin: 0;
+}
+.event h2 span {
+    color: orangered;
+}
 
-/* 뉴스 */
+.event-thumbnail{
+    margin: 15px 0;
+    border: 1px solid gray;
+    box-shadow: 5px 5px 0 0 gray;
+    width: 162px;
+}
+.event-index{
+    margin: 0 0 15px 0;
+}
+.event-index em{
+    font-style: normal;
+}
+.event button {
+    position: absolute;
+    top: 0;
+    width: 18px;height: 18px;
+    font-size: 0;
+    background-image: url(images/back_forward.png);
+}
+.btn-event-prev{
+    right: 25px;
+    background-position: -1px center;
+}
+.btn-event-next{
+    background-position: -38px center;
+    right: 0;
+}
