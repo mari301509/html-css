@@ -17,8 +17,8 @@
     clip-path:polygon(0 0, 0 0, 0 0);
 }
 /* 본문 기본 설정 */
-body{ 
-    font-family: 'Spoqa Han Sans', 'Sans-serif'; 
+body{
+    font-family: 'Spoqa Han Sans', sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
     color: #181818;
@@ -475,7 +475,7 @@ dl,dd{
     font-size: 1.4rem;
 }
 .pds h2{
-    left: 72px;
+    left: 70px;
 }
 .tab{
     display: block;
@@ -584,19 +584,19 @@ dl,dd{
     background: silver linear-gradient(to bottom, silver, #eee);
     
 }
+.section-wrap h2{
+     font-size: 1.5rem;
+     margin: 0;
+ }
+.point-color {
+    color: orangered;
+}
 /* 신규이벤트 */
 .event{
     position: relative;
     border-bottom: 1px solid gray;
+    margin-bottom: 15px;
 }
-.event h2{
-    font-size: 1.5rem;
-    margin: 0;
-}
-.event h2 span {
-    color: orangered;
-}
-
 .event-thumbnail{
     margin: 15px 0;
     border: 1px solid gray;
@@ -609,12 +609,18 @@ dl,dd{
 .event-index em{
     font-style: normal;
 }
-.event button {
+.btn-event{
+    background: pink;
+}
+.btn-event button {
     position: absolute;
     top: 0;
     width: 18px;height: 18px;
-    font-size: 0;
     background-image: url(images/back_forward.png);
+    border: 0;
+    margin: 0; padding: 20px 0 0 0;
+    overflow: hidden;
+    cursor: pointer;
 }
 .btn-event-prev{
     right: 25px;
@@ -623,4 +629,31 @@ dl,dd{
 .btn-event-next{
     background-position: -38px center;
     right: 0;
+}
+
+/*관련사이트*/
+.related ul{
+    margin-top: 15px;
+    border: 1px solid gray;
+    background: #fff;
+    height: 27px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all 2s;
+}
+.related ul:hover,
+.related ul:focus-within {
+    height: 147px;
+    padding: 10px 0;
+    background: yellow;
+    outline: none;
+}
+.related-item a{
+    line-height: 25px;
+    text-indent: 20px;
+    display: block;
+}
+.related-item a:focus{
+    outline: 1px solid navy;
+    outline-offset: -4px;
 }
