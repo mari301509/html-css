@@ -5,7 +5,7 @@ var subLinks = $('.submenu a');
 var boardItems = $('.board li');
 var sections = $('.board section');
 var tab = $('.tab a');
-
+$("body").removeClass("preload");
 //attr
 subLinks.attr('class','icon-dot-circled');
 boardItems.attr('class','icon-dot-circled');

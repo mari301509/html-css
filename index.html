@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="css/main.css">
     <script defer src=./js/jquery.min.js></script>
     <script defer src=./js/main.js></script>
+
 </head>
-<body>
+<body class="preload">
     <div class="container">
         <!-- 헤더 -->
         <header class="header">
-            <h1 class=logo><a href="./index.html"><img src="./images/logo.png" alt="Web Cafe"></a></h1>
+            <h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="Web Cafe"></a></h1>
             <ul class="link">
                 <li><a href="#">홈</a></li>
                 <li><span aria-hidden="true">:</span><a href="#">로그인</a></li>
@@ -251,11 +252,50 @@
                         </ul>
                     </section>
                 </div>
+                <section class="favorite section-wrap">
+                    <h2>인기<span class="point-color">사이트</span></h2>
+                    <ol>
+                        <li><a href="#" data-message="hi">W3C</a><em class="up">상승</em></li>
+                        <li><a href="#">Css Zen Garden</a><em class="down">하락</em></li>
+                        <li><a href="#">MDN</a><em class="stop">멈춤</em></li>
+                        <li><a href="#">Web Standards</a><em class="up">상승</em></li>
+                    </ol>
+                    <a href="#" class="more"><span class="icon-plus"></span>더보기</a>
+                </section>
             </div>
         </main>
-        <div class="slogan">슬로건</div>
+        <article class="slogan">
+            <h2 class="coffee" title="웹카페에서 웹표준을">슬로건</h2>
+            <p>
+                <q cite="http://w3.org/WAI" lang="en">The power of the Web is in its universality, Access by everyone regardless of disability is an essential
+                aspect.</q>
+                <span>Tim Berners - Lee , W3C Director and inventor of the World Wide Web</span>
+            </p>
+            <footer class="a11y-hidden">
+                출처 : W3C - http://w3.org/WAI
+            </footer>
+        </article>
         <div class="footer-bg">
-            <footer class="footer">푸터</footer>
+            <footer class="footer">
+                <a href=""><img src="images/footer_logo.png" alt=""></a>
+                <ul>
+                    <li><a href="#">회사 소개</a></li>
+                    <li><a href="#">개인정보 보호정책</a></li>
+                    <li><a href="#">이메일주소 무단수집 거부</a></li>
+                    <li><a href="#" lang="en">contact us</a></li>
+                    <li><a href="#" lang="en">site map</a></li>
+                </ul>
+                <address class="address">
+                    <span>서울시 광진구 화양동 35-65</span>
+                    <span><a href="mailto:lmr301509@gmail.com">lmr301509@gmail.com</a></span>
+                    <span><a href="tel:1234-1234">010-9796-0510</a></span>
+                </address>
+                <small class="copyright">copyright since &copy; 2020 by Web Cafe CORPORATION ALL RIGHTS RESERVED</small>
+                <div class="badge">
+                    <img src="images/html5_logo.png" alt="최신 웹표준 기술인 HTML5를 사용하여 웹카페의 콘텐 구조를 설계했습니다">
+                    <img src="images/css3_logo.png" alt="최신 웹표준 기술인 CSS3를 사용하여 ">
+                </div>
+            </footer>
         </div>
     </div>
 </body>
